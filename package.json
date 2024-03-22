@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@vue/cli": "^5.0.8",
+    "axios": "^1.6.8"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "~5.0.8"
+  }
+}
