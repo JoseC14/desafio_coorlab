@@ -63,7 +63,7 @@ export default {
         width:30vw;
         border-radius: 50px;
         position: relative;
-        bottom:165px;
+        bottom:250px;
         margin-right: 100px;
         float: right;
         display: flex;
@@ -93,5 +93,6 @@ export default {
 
     .pass-price{
         margin-right: 30px;
+        text-wrap:nowrap;
     }
 </style>

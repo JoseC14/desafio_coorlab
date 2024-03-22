@@ -14,12 +14,14 @@ export default {
 </script>
 
 <style scoped>
-
+  aside{
+    height: 100vh;
+  }
   .sidebar{
     background-color: rgb(62, 62, 62);
     float:left;
     color:white;
-    height: 100vh;
+    
     padding:10px
   }
 

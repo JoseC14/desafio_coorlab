@@ -83,11 +83,14 @@ export default {
 <style scoped>
     input, select{
         border: none;
-        border-radius:15px
+        border-radius:2px;
+        padding:8px;
+        border:1px solid #ccc;
     }
 
     h3{
-        margin: 0;
+        display:flex;
+        justify-content:start;
     }
     .container{
         display: flex;
@@ -99,17 +102,11 @@ export default {
         top: 100px;
     }
     #destiny{
-        padding:5px;
         border: none;
-        padding-left:30px;
-        padding-right: 30px;
-        padding-top:10px;
-        padding-bottom: 10px;
         background-color:white;
     }
 
     #date_wished{
-        padding: 5px;
         position: relative;
         margin-bottom:20px;
     }
