@@ -1,3 +1,13 @@
 #!/bin/bash
+pip install django
+pip install djangorestframework
+pip install django-cors-headers
 
-echo "Implemente aqui o script para executar a sua solução"
+npm install @vue/cli
+
+cd backend
+python manage.py runserver 3000 &
+
+cd ../
+cd frontend/core
+npm run serve
