@@ -8,8 +8,8 @@
             <div class="pass-info">  
                
                 <h3>{{fast_transport}}</h3>
-                <p>{{bed}}</p>
-                <p>Tempo estimado: {{time_fast}}</p>
+                <p>Leito: {{bed}}</p>
+                <p>Tempo: {{time_fast}}</p>
             </div>
 
             <div class="pass-price">
@@ -26,12 +26,12 @@
             </div>
             <div class="pass-info">  
                 <h3>{{transport_slow}}</h3>
-                <p>{{seat}}</p>
-                <p>Tempo estimado: {{time_slow}}</p>
+                <p>Assento: {{seat}}</p>
+                <p>Tempo: {{time_slow}}</p>
             </div>
 
             <div class="pass-price">
-                <h3>{{price_slow}}$</h3>
+                <h3> {{price_slow}}$</h3>
             </div>
             
         </div>    
@@ -92,7 +92,7 @@ export default {
     }
 
     .pass-price{
-        margin-right: 30px;
         text-wrap:nowrap;
+        margin-right:20px;
     }
 </style>

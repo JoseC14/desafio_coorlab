@@ -34,13 +34,17 @@
                         :seat="apiData[1].seat"
                         :time_slow="apiData[1].duration"/>
         </div>
+
+        <div v-if="formError">
+            <ModalError @destroyModal="closeModal"/>
+        </div>
     </div>
 </template>
 
 <script>
 
 import PassTravel from './PassTravel.vue'
-
+import ModalError from './ModalError.vue'
 import axios from 'axios'
 
 
@@ -48,13 +52,15 @@ import axios from 'axios'
 export default {
     name:'FormTravel',
     components:{
-        PassTravel
+        PassTravel,
+        ModalError
     },
     data(){
     return {
         destiny: '',
         date_wished: '',
       formSubmitted:false,
+      formError:false,
       apiData: null,
       cities:[]
     };
@@ -67,10 +73,20 @@ export default {
     },
   methods: {
     searchPass() {
-        axios.get(`http://127.0.0.1:8000/api/transports/${this.destiny}`).then(response=>{
+        if(this.destiny == '' || this.date_wished == '')
+        {
+            this.formError = true
+        }else{
+            axios.get(`http://127.0.0.1:8000/api/transports/${this.destiny}`).then(response=>{
             this.apiData = response.data.transports
             this.formSubmitted=true
-        })
+            })
+        }
+        
+    },
+    closeModal(data)
+    {
+        this.formError = data
     }
   }
 }
