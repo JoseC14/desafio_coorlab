@@ -1,7 +1,8 @@
 <template>
     <div class="content">
-        
+        <h3>Estas são as melhores alternativas para a data selecionada</h3>
         <div class="travel-content">
+            
             <div class="space-content">
                     <img class="airplane" src="../assets/airplane.png"> 
             </div>

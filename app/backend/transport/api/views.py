@@ -19,10 +19,10 @@ def transport_detail_api_view(request, city):
         }},status = status.HTTP_404_NOT_FOUND)
     
     if request.method == 'GET':
-        #pega a query ordena por menor preço e seleciona o primeiro
+        #pega a query ordena por a maior duracao e seleciona o primeiro
         econ = transport.order_by('-price_econ').first()
-        #pega a query ordena por maior preco conforto e orderna pelo maior preço
-        conf = transport.order_by('price_confort').first()
+        #pega a query ordena por maior preco conforto e orderna pelo menor duracao
+        conf = transport.order_by('-duration').first()
         #serializa as querys
         serializer_econ = TransportSerializer(econ)
         serializer_conf = TransportSerializer(conf)

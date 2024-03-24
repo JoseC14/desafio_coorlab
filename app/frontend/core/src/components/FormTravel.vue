@@ -67,8 +67,10 @@ export default {
   },
   mounted()
     {
-        axios.get('http://127.0.0.1:8000/api/transports').then(response=>{
+        axios.get('http://127.0.0.1:3000/api/transports').then(response=>{
             this.cities=response.data.map(transport => transport.city);
+        }).catch(err=>{
+            console.log(err)
         })
     },
   methods: {
@@ -77,9 +79,11 @@ export default {
         {
             this.formError = true
         }else{
-            axios.get(`http://127.0.0.1:8000/api/transports/${this.destiny}`).then(response=>{
+            axios.get(`http://127.0.0.1:3000/api/transports/${this.destiny}`).then(response=>{
             this.apiData = response.data.transports
             this.formSubmitted=true
+            }).catch(err=>{
+                console.log(err)
             })
         }
         
